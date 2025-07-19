@@ -3,13 +3,13 @@
 // Output: 5 
 //  Use an object to store frequency, then return the first element with frequency 1 
 
-// let arr = [4, 5, 1, 2, 0, 4, 1, 0];
-// let frequencyMap = {};
-// for (let num of arr) {
-//   frequencyMap[num] = (frequencyMap[num] || 0) + 1;
-// }
-// let firstNonRepeating = arr.find(num => frequencyMap[num] == 1);
-// console.log(firstNonRepeating)
+let arr = [4, 5, 1, 2, 0, 4, 1, 0];
+let frequencyMap = {};
+for (let num of arr) {
+  frequencyMap[num] = (frequencyMap[num] || 0) + 1;
+}
+let firstNonRepeating = arr.find(num => frequencyMap[num] == 1);
+console.log(firstNonRepeating)
 
 
 
@@ -23,10 +23,10 @@
 //  Use Set or object keys for uniqueness 
 
 
-// let arr1 = [1, 2, 3];
-// let arr2 = [2, 3, 4];
-// let mergedArr = [...new Set([...arr1,...arr2])];
-// console.log(mergedArr)
+let arr1 = [1, 2, 3];
+let arr2 = [2, 3, 4];
+let mergedArr = [...new Set([...arr1,...arr2])];
+console.log(mergedArr)
 
 
 // Q4 (Updated): Convert an Array of Objects into a Single Object 
@@ -41,15 +41,15 @@
 // } 
 //  Use a loop or reduce() to convert array into object with id as key 
 
-// let arr = [ 
-//     { id: 1, name: "A" }, 
-//     { id: 2, name: "B" }
-// ]
-// let obj = {};
-// for (let item of arr) {
-//     obj[item.id] = item.name;
-// }
-// console.log(obj)
+let arr = [ 
+    { id: 1, name: "A" }, 
+    { id: 2, name: "B" }
+]
+let obj = {};
+for (let item of arr) {
+    obj[item.id] = item.name;
+}
+console.log(obj)
 
 
 
@@ -66,8 +66,8 @@
 // �
 //  Use Object.entries() 
 
-// let obj = { a: 1, b: 2 }
-// console.log(Object.entries(obj))
+let obj = { a: 1, b: 2 }
+console.log(Object.entries(obj))
 
 
 
@@ -85,12 +85,12 @@
 //  Use object to group and count occurrences 
 
 
-// let arr = [1, 1, 2, 3, 3, 3];
-// let frequencyMap = {};
-//  for (let num of arr) {
-//     frequencyMap[num] = (frequencyMap[num] || 0) +1 ;
-//      }
-//  console.log(frequencyMap)
+let arr = [1, 1, 2, 3, 3, 3];
+let frequencyMap = {};
+ for (let num of arr) {
+    frequencyMap[num] = (frequencyMap[num] || 0) +1 ;
+     }
+ console.log(frequencyMap)
 
 
 
@@ -101,13 +101,13 @@
 // Output: 2 
 //  Use bitwise AND & and right shift >>
 
-// let num = 9;
-// let count = 0;
-// while (num > 0) {
-//     count += num & 1;
-//     num >>= 1;
-// }
-// console.log(count)
+let num = 9;
+let count = 0;
+while (num > 0) {
+    count += num & 1;
+    num >>= 1;
+}
+console.log(count)
 
 
 
@@ -118,24 +118,24 @@
 
 //  Implement binary search manually 
  
-// let arr = [1, 3, 5, 7, 9];
-// let target = 5;
-// function binarySearch(arr, target) {
-//     let left = 0;
-//     let right = arr.length - 1;
-//     while (left <= right) {
-//         let mid = Math.floor((left + right) / 2);
-//         if (arr[mid] == target) {
-//             return mid;
-//         } else if (arr[mid] < target) {
-//             left = mid + 1;
-//         } else {
-//             right = mid - 1;
-//         }
-//     }
-//     return -1;
-// }
-//  console.log(binarySearch(arr, target))
+let arr = [1, 3, 5, 7, 9];
+let target = 5;
+function binarySearch(arr, target) {
+    let left = 0;
+    let right = arr.length - 1;
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        if (arr[mid] == target) {
+            return mid;
+        } else if (arr[mid] < target) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+    return -1;
+}
+ console.log(binarySearch(arr, target))
 
 
 //  Q2. Check if Two Objects Have the Same Keys and Values 
@@ -145,31 +145,26 @@
 //  Order doesn’t matter. Compare keys and values. 
 
 
-//  let obj1 = { a: 1, b: 2 };
-//   let obj2 = { b: 2, a: 1 };
-//  let result = true;
-//   for (let key in obj1) {
-//     if (obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)) {
-//       if (obj1[key]!== obj2[key]) {
-//         result = false;
-//         break;
-//       }
-//     } else {
-//       result = false;
-//       break;
-//     }
-//   }
-//   console.log(result)
+ let obj1 = { a: 1, b: 2 };
+  let obj2 = { b: 2, a: 1 };
+ let result = true;
+  for (let key in obj1) {
+    if (obj1.hasOwnProperty(key) && obj2.hasOwnProperty(key)) {
+      if (obj1[key]!== obj2[key]) {
+        result = false;
+        break;
+      }
+    } else {
+      result = false;
+      break;
+    }
+  }
+  console.log(result)
 
 
 
 
 
-//  Q5. Find a Pair With Given Sum (Using Object Map) 
-// Input: [1, 2, 4, 7], Target = 6 
-// Output: true (Because 2 + 4 = 6) 
-
-//  Use object for complement lookup 
 
 
     
